@@ -31,14 +31,17 @@ public class Program {
 
 
                 System.out.println();
+                System.out.println();
 
                 UI.clearScreen();
                 UI.printBoard(chessMatch.getPieces(),possibleMoves);
 
+                System.out.println();
 
                 System.out.print("Target:");
                 ChessPosition target = UI.readChessPosition(sc);
-
+                System.out.println();
+                System.out.println();
                 ChessPiece capturedPiece = chessMatch.performChessMove(source,target);
 
                 if (capturedPiece != null){
