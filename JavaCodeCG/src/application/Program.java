@@ -1,13 +1,11 @@
 package application;
 
-import boardgame.Board;
-import boardgame.Position;
+
 import chess.ChessException;
 import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -61,14 +59,10 @@ public class Program {
 
 
             }
-            catch (ChessException e){
+            catch (ChessException | InputMismatchException e){
                 System.out.println(e.getMessage());
                 sc.nextLine();
 
-            }
-            catch (InputMismatchException e){
-                System.out.println(e.getMessage());
-                sc.nextLine();
             }
         }
 
